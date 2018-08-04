@@ -1,0 +1,204 @@
+@import './variables.scss';
+
+html {
+    font-family: sans-serif;
+}
+
+html,
+body,
+#host,
+.editor-root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.editor-container {
+    height: 100%;
+}
+
+.viewer-container {
+    height: 100%;
+}
+
+.viewer-container .test-pane,
+.viewer-container iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.toolbar {
+    background: #4f4f4f;
+    padding: 3px;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+}
+
+.toolbar__right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1 1 auto;
+    align-items: center;
+}
+.toolbar__left {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    align-items: center;
+}
+
+.toolbar__text {
+    line-height: 1.6em;
+    display: block;
+    padding: 2px;
+    color: #e6e6e6;
+    font-size: 12px;
+    vertical-align: bottom;
+}
+
+.toolbar__item {
+    color: #333;
+    display: inline-block;
+    font-size: 1.5em;
+    padding: 2px;
+}
+
+.toolbar__item--active {
+    color: #808080;
+}
+.toolbar__item:hover {
+    color: #d4d4d4;
+}
+
+.test-pane__empty {
+    iframe {
+        display: none;
+    }
+}
+
+.output-pane {
+    font-family: monospace;
+    background: #efefef;
+    height: 100%;
+    overflow: auto;
+}
+
+.output-pane__line {
+    padding: 1px 6px;
+    border: dashed #e4e4e4;
+    border-width: 0 0 1px 0;
+    color: #555;
+}
+
+.grammar-test__input textarea,
+.grammar-test__tree-view svg {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.grammar-test__tree-view,
+.grammar-test__input {
+    width: 100%;
+    height: 100%;
+}
+
+.grammar-test__tree-view svg {
+    display: block;
+}
+
+.grammar-test__input {
+    display: flex;
+    flex-direction: column;
+    
+    .grammar-test__input-mask {
+        position: absolute;
+        margin: 4px 0 0 7px;
+    }
+}
+
+.grammar-test__tree-view {
+    overflow: auto;
+
+    .node text {
+        font: 12px sans-serif;
+    }
+
+    .node--leaf circle {
+        fill: $lexer_id;
+    }
+
+    .node--internal circle {
+        fill: $parser_id;
+    }
+
+    .node--internal text {
+        text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+        font-weight: bold;
+    }
+
+    .link {
+        fill: none;
+        stroke: #ccc;
+        stroke-width: 2px;
+    }
+}
+
+
+.grammar-test__input {
+}
+
+.editor-pane {
+    flex: 1 1 100%;
+}
+
+.splitter {
+    flex: 0 0 auto;
+    content: ' ';
+    background: lighten($gray, 25%);
+    border-color: lighten($gray, 15%);
+    border-style: solid;
+}
+
+.splitter-h {
+    width: 100%;
+    height: 5px;
+    cursor: ns-resize;
+    border-width: 1px 0;
+}
+.splitter-v {
+    height: 100%;
+    width: 5px;
+    cursor: ew-resize;
+    border-width: 0 1px;
+}
+
+.pane-container {
+    display: flex;
+}
+
+.pane-container-h {
+    flex-direction: row;
+}
+.pane-container-v {
+    flex-direction: column;
+}
+.pane-section {
+    flex: 1 1 100%;
+    overflow: hidden;
+}
+.pane-section--dynamic {
+    flex: 0 0 auto;
+}
+
+.editor-container__text {
+    display: flex;
+    flex-direction: column;
+}

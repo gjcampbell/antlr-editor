@@ -1,0 +1,11 @@
+﻿.lines {
+  height: 100%;
+  overflow: auto;
+  background-color: #000;
+}
+
+.line {
+  border-bottom: solid 1px #fff;
+  color: #fff;
+  font-family: monospace;
+}

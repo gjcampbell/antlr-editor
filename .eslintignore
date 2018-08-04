@@ -1,7 +1,3 @@
-﻿app/output/*
-
-.vs
-
 # Logs
 logs
 *.log
@@ -54,3 +50,4 @@ main.js.map
 
 .idea
 npm-debug.log.*
+__snapshots__

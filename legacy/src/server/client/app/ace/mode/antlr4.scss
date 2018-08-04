@@ -1,0 +1,77 @@
+﻿@import '../../content/variables.scss';
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.ace-antlr4 {
+    .ace_gutter {
+        background-color: $gutter;
+    }
+
+    .ace_content {
+        background-color: $bg;
+        color: $text;
+    }
+
+    .ace_keyword {
+        color: $keyword;
+    }
+
+    .ace_operator {
+        font-weight: bold;
+    }
+
+    .ace_matcher {
+        color: $matcher;
+    }
+
+    .ace_plurality {
+        font-weight: bold;
+        color: $plurality;
+    }
+
+    .ace_identifier {
+        font-weight: bold;
+    }
+
+    .ace_parser.ace_identifier {
+        font-style: italic;
+        color: $parser_id;
+    }
+
+    .ace_parser.ace_use {
+        color: desaturate(lighten($parser_id, 10%), 50%);
+    }
+
+    .ace_lexer.ace_identifier {
+        color: $lexer_id;
+    }
+
+    .ace_lexer.ace_use {
+        color: desaturate(lighten($lexer_id, 10%), 50%);
+    }
+
+    .ace_comment {
+        color: $gray;
+    }
+
+    .ace_grouping {
+        font-weight: bold;
+        color: $grouping;
+    }
+
+    .ace_selection {
+        background: $selection;
+    }
+
+    .ace__gutter__flash::before {
+        animation-name: fade-out;
+        animation-duration: 3s;
+        content: '⭐';
+        position: absolute;
+        margin-left: -14px;
+        font-size: 0.8em;
+    }
+}

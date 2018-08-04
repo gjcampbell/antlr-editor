@@ -1,0 +1,31 @@
+﻿@import '../../variables.scss';
+
+.container {
+  height: 100%;
+  overflow: auto;
+
+  :global {
+    .node text {
+      font: 12px sans-serif;
+    }
+
+    .node--leaf circle {
+      fill: $lexer_id;
+    }
+
+    .node--internal circle {
+      fill: $parser_id;
+    }
+
+    .node--internal text {
+      text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+      font-weight: bold;
+    }
+
+    .link {
+      fill: none;
+      stroke: #ccc;
+      stroke-width: 2px;
+    }
+  }
+}

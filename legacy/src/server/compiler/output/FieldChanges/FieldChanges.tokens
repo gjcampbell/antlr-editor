@@ -1,0 +1,11 @@
+ADD=1
+REMOVE=2
+SESSION=3
+DOC_NAME=4
+TAB=5
+FIELD_NAME=6
+NAME=7
+NL=8
+'Add'=1
+'Remove'=2
+'Session'=3

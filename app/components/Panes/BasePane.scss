@@ -1,0 +1,18 @@
+﻿.container {
+  height: 100%;
+
+  :global {
+    .title {
+      font-size: .75rem;
+      align-items: center;
+      box-sizing: border-box;
+      > div {
+        padding-left: 0;
+      }
+    }
+  }
+
+  .paneWrapper {
+    height: calc(100% - 32px);
+  }
+}

@@ -1,0 +1,5 @@
+DASH=1
+SLASH=2
+LETTER=3
+'-'=1
+'/'=2
